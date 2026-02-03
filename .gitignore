@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+chroma_db/
+*.sqlite3
+.env
+.ipynb_checkpoints/
+*.log

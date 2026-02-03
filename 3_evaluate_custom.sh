@@ -1,0 +1,1 @@
+HF_ENDPOINT=https://hf-mirror.com python /nfs/users/yuanjiayu/Prepare/LLM_Apply_Course/langChain17/my_risk_agent/3_evaluate_custom.py

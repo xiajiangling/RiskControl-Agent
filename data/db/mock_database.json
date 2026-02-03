@@ -1,0 +1,49 @@
+{
+    "users_table": {
+      "user_001": {
+        "name": "张三-QA",
+        "role": "internal_qa",
+        "status": "active"
+      },
+      "user_002": {
+        "name": "李四-被封禁用户",
+        "role": "normal_customer",
+        "status": "blocked"
+      },
+      "user_003": {
+        "name": "王五-正常用户",
+        "role": "normal_customer",
+        "status": "active"
+      },
+      "user_004": {
+        "name": "赵六-黑产账号",
+        "role": "black_industry",
+        "status": "blacklisted"
+      },
+      "user_005": {
+        "name": "孙七-普通用户",
+        "role": "normal_customer",
+        "status": "active"
+      }
+    },
+    "orders_table": {
+      "order_001": {
+        "uid": "user_001",
+        "amount": 10.5,
+        "risk_level": "low",
+        "intercept_reason": "none (internal QA 测试订单，未触发拦截)"
+      },
+      "order_002": {
+        "uid": "user_002",
+        "amount": 199.0,
+        "risk_level": "high",
+        "intercept_reason": "用户状态为 blocked，命中策略：ACCOUNT_BLOCKED_INTERCEPT"
+      },
+      "order_003": {
+        "uid": "user_004",
+        "amount": 9999.0,
+        "risk_level": "high",
+        "intercept_reason": "用户角色为 black_industry，命中黑名单策略：BLACKLIST_USER_INTERCEPT"
+      }
+    }
+  }
